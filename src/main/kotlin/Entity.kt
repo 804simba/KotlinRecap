@@ -91,4 +91,9 @@ fun main() {
         println("They are not equal")
     }
     // but for referential equality use === to check what reference type the object is
+    val nameOfDogs = listOf("Chuck", "Bob", "Darryl", "Ford", null, null)
+    nameOfDogs
+        .filterNotNull()
+        .filter { name -> name.startsWith("B") }
+        .forEach { dogName -> println(dogName) }
 }
